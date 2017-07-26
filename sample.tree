@@ -5,7 +5,6 @@
                                                                 
                                                                 
                                                                 
-                                                                
                                                fffff  fff       
                                               ffFtFFFfFFFf      
                                               FFFFtFFFFtFf ffff 
@@ -19,20 +18,21 @@
                                                T  TTTT fFtFf    
                                                 TTTTTT  t       
                                                   TTTTtt        
-                                           ooo    TTTT          
-                                       ooo o      TTTT          
-                                  ooo  o   o      TTTT          
-                              ooo o  o o   o      TTTT          
-                           o   o  o  o o   o      TTTT          
-                       oo      o  o  o o   o      TTTTT         
-                 oo   o  o o   o  o  o o   o      TTTTT         
-            oo  o  o  o  o o   o  o  o o   o      TTTTT         
-   ffff    o  o o  o  o  o o   o  o  o o   o      TTTTT         
-  fFFFFf   o    o  o  o    o   o  o  o o   o     TTTTTT         
- fftFtFf    oo  o  o  o    o   o  o o  oo  oo    TTTTTT         
-    tTf       o o  o  o oo o   o  oo   o   o     TTTTTT         
-     T     o  o o  o  o  o o   o  o o  o   o     TTTTTT         
-     T      oo   oo    oo  o   o  o  o ooo ooo   TTTTTT         
+                          ffff              ooo   TTTT          
+                         FFFtf          ooo o     TTTT          
+                        fFtFtFf    ooo  o   o     TTTT          
+                        fFFttF ooo o  o o   o     TTTT          
+                           TT   o  o  o o   o     TTTT          
+                       oo  TT   o  o  o o   o     TTTTT         
+                 oo   o  o TT   o  o  o o   o     TTTTT         
+            oo  o  o  o  o TT   o  o  o o   o     TTTTT         
+           o  o o  o  o  o TT   o  o  o o   o     TTTTT         
+     ff    o    o  o  o    TT   o  o  o o   o    TTTTTT         
+    fFFf    oo  o  o  o    TT   o  o o  oo  oo   TTTTTT         
+    ftFf      o o  o  o oo TT   o  oo   o   o    TTTTTT         
+     T     o  o o  o  o  o TT   o  o o  o   o    TTTTTT         
+     T      oo   oo    oo  TT   o  o  o ooo ooo  TTTTTT         
+     T                     TT                    TTTTTT         
 -----r-------------------------------------------rrrrrr---------
 ------------------------------------------------rrrr-r-r--------
 -----------------------------------------------r-rr--r--r-------
