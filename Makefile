@@ -13,7 +13,7 @@ view : $(TARGET)
 	eog $<
 
 %.png : %.ppm
-	convert -sample %3600 $< $@
+	convert -sample %800 $< $@
 
 %.ppm : %.tree
 	./tree2ppm.sh $< $@
