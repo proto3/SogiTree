@@ -1,3 +1,28 @@
 #! /bin/bash
 
-sed -e 's/[^- fFtTor]/ /g'
+IFS=''
+COUNT=0
+
+TMP_FILE=.${0#./}.tmp
+
+rm -f $TMP_FILE
+
+sed -e 's/[^- fFtTor]/ /g' |
+while read LINE;
+do
+	echo $LINE | grep -qi '-'
+
+	if [ "$?" = "0" ]
+	then
+		echo $LINE | grep -qi 'r'
+		if [ "$?" = "0" ]
+		then
+			echo $LINE | sed -e 's/[-]/ /g' | sed -e 's/[rR]/T/g' >> $TMP_FILE
+		fi
+	fi
+	echo $LINE >> $TMP_FILE
+done
+
+cat $TMP_FILE | tail -n+1
+rm -f $TMP_FILE
+
