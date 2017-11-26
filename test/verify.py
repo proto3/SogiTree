@@ -82,6 +82,14 @@ def test_light(tree_in, tree_out):
 
     return SUCCESS("Trees grow only when sun")
 
+def test_root(tree_in, tree_out):
+    for y in range(len(tree_out)):
+        for x in range(len(tree_out[0])):
+            if (tree_out[y][x] is "r" and tree_in[y][x] not in "r-"):
+                return FAILED("Root can't developp without earth pos="+str((y,x)) + "e=" +tree_in[y][x])
+
+    return SUCCESS("Roots grows in ground")
+
 ###############################################################################
 # MAIN
 ###############################################################################
@@ -94,5 +102,6 @@ def main():
     test_aliens(tree_in, tree_out)
     test_desert(tree_in, tree_out)
     test_light(tree_in, tree_out)
+    test_root(tree_in, tree_out)
 
 main()
