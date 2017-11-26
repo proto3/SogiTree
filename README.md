@@ -48,13 +48,16 @@ Un bonus pourra être envisagé pour toute solution sympa de visualisation du fi
 ### Les 10 règles du Tree Club
 
 0. On ne parle pas du Tree Club
-1. La croissance de l'arbre ne déforme pas le monde et n'introduit pas d'éléments inconnus
-2. Un desert ne produit pas de végétation
-3. Un arbre ne pousse que si un élément de tronc est en contact avec une racine en contact avec de la terre
+1. Respecte la géométrie du monde
+2. Pas d'invasion d'éléments extraterrrestres
+3. Dans le désert rien ne pousse
 4. Un arbre ne peux pas pousser sans lumière
-5. Quand un arbre pousse, le nombre d'élément de type tronc augmente
-6. Quand un arbre pousse, le nombre d'élément de type feuille ne diminue pas
-7. 
+5. Une racine ne pousse que dans la terre
+6. Un vieux tronc ne disparait pas
+7. Un jeune tronc ne peut devenir qu'un vieux tronc
+8. un jeune tronc ne peut se créer qu'au contact d'une racine ou d'un tronc
+9. Le feuillage doit pouvoir faire contact avec une racine via des éléments végétaux
+10. Les cailloux et le sol ça pousse pas hein...
 
 ## Organisation
 
