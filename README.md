@@ -44,3 +44,25 @@ Par défaut le script tree2ppm.sh permet de transformer le fichier .tree en une 
 Chaque programme sera noté sur la qualité de l'algorithme de croissance de la végétation sur des critères purement subjectifs par les participants. Pour cela nous comparerons les résultats obtenus par chaque programme à partir de la même graine.
 
 Un bonus pourra être envisagé pour toute solution sympa de visualisation du fihier .tree
+
+### Les 10 règles du Tree Club
+
+0. On ne parle pas du Tree Club
+1. La croissance de l'arbre ne déforme pas le monde et n'introduit pas d'éléments inconnus
+2. Un desert ne produit pas de végétation
+3. Un arbre ne pousse que si un élément de tronc est en contact avec une racine en contact avec de la terre
+4. Un arbre ne peux pas pousser sans lumière
+5. Quand un arbre pousse, le nombre d'élément de type tronc augmente
+6. Quand un arbre pousse, le nombre d'élément de type feuille ne diminue pas
+7. 
+
+## Organisation
+
+- Equipes de 3 préparées à l'avance
+- Présentation du sujet à 12h pendant 15 minutes
+- Cloture des résultats 20 minutes
+- Costume d'arbitre
+- Note artistique 5 points
+- Note réalisme (affichage)
+- Points TDD
+- Scripts d'

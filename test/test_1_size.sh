@@ -24,6 +24,5 @@ do
 	if [ ! "$ALIENS" = "" ];
 	then
 		ERROR "Unknow chars :\"$ALIENS\" with $TREE_FILE"
-		echo -e "\033[31mERROR2\033[0m" >&2
 	fi
 done && echo -e "\033[32mOK\033[0m"

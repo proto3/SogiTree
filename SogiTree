@@ -7,7 +7,7 @@ TMP_FILE=.${0#./}.tmp
 
 rm -f $TMP_FILE
 
-sed -e 's/[^- fFtTor]/ /g' |
+#sed -e 's/[^- fFtTor]/ /g' |
 while read LINE;
 do
 	echo $LINE | grep -qi '-'
@@ -23,6 +23,6 @@ do
 	echo $LINE >> $TMP_FILE
 done
 
-cat $TMP_FILE | tail -n+1
+cat $TMP_FILE | tail -n+2
 rm -f $TMP_FILE
 
