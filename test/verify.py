@@ -98,6 +98,14 @@ def test_old_trunk(tree_in, tree_out):
 
     return SUCCESS("Nothing like an old tree...")
 
+def test_young_trunk(tree_in, tree_out):
+    for y in range(len(tree_in)):
+        for x in range(len(tree_in[0])):
+            if (tree_in[y][x] is "t" and tree_out[y][x] not in "tT" ):
+                return FAILED("young trunk can only become old")
+
+    return SUCCESS("You have to care about ")
+
 ###############################################################################
 # MAIN
 ###############################################################################
@@ -112,5 +120,6 @@ def main():
     test_light(tree_in, tree_out)
     test_root(tree_in, tree_out)
     test_old_trunk(tree_in, tree_out)
+    test_young_trunk(tree_in, tree_out)
 
 main()
