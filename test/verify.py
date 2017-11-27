@@ -106,6 +106,24 @@ def test_young_trunk(tree_in, tree_out):
 
     return SUCCESS("You have to care about ")
 
+def test_ground_solidity(tree_in, tree_out):
+    for y in range(len(tree_in)):
+        for x in range(len(tree_in[0])):
+            if (tree_in[y][x] is "-" and tree_out[y][x] not in "-r" ):
+                return FAILED("Missing earth")
+
+    for y in range(len(tree_in)):
+        for x in range(len(tree_in[0])):
+            if (tree_in[y][x] is "o" and tree_out[y][x] is not "o" ):
+                return FAILED("Stop stealing my stones !")
+
+    for y in range(len(tree_out)):
+        for x in range(len(tree_out[0])):
+            if (tree_out[y][x] in "o-" and tree_out[y][x] is not tree_in[y][x] ):
+                return FAILED("You cant create ground from thin air !")
+
+    return SUCCESS("Earth looks normal, boring like dirt")
+
 ###############################################################################
 # MAIN
 ###############################################################################
@@ -121,5 +139,6 @@ def main():
     test_root(tree_in, tree_out)
     test_old_trunk(tree_in, tree_out)
     test_young_trunk(tree_in, tree_out)
+    test_ground_solidity(tree_in, tree_out)
 
 main()
