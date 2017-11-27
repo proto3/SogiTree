@@ -1,0 +1,20 @@
+#! /bin/bash
+
+TREE_FILENAME=$1
+PNG_FILENAME=$2
+
+if [ $# -ne 2 ]
+then
+	echo "usage : $0 tree_file png_file"
+	exit 42
+fi
+
+PPM_FILENAME=$PNG_FILENAME
+
+echo $TREE_FILENAME
+echo $PPM_FILENAME
+echo $PNG_FILENAME
+
+scripts/tree2ppm.sh $TREE_FILENAME $PPM_FILENAME
+convert -sample %800 $PPM_FILENAME $PNG_FILENAME
+#rm -f $PPM_FILENAME
