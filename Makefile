@@ -4,12 +4,14 @@ VIDEO_TARGETS=results/seed.mp4
 BIN=scripts
 DATA=datas
 RST=results
+NOTE=$(RST)/test_result
+TESTER=./test/verify.py
 
 SOGITREE=./SogiTree
 TREE2PNG=./tree2png
 
 .PRECIOUS : %.ppm
-.PHONY : all clean view
+.PHONY : all note clean view
 
 all : $(TARGET)
 
@@ -43,3 +45,19 @@ $(RST)/%.mp4 : datas/%.tree
 
 README.pdf : README.md
 	pandoc -t beamer $< --highlight-style=zenburn -o $@
+
+note:
+	rm -f $(NOTE)
+	$(SOGITREE) < $(DATA)/desert.tree > $(RST)/desert_test.tree
+	$(SOGITREE) < $(DATA)/seed.tree > $(RST)/seed_test.tree
+	$(SOGITREE) < $(DATA)/sample.tree > $(RST)/sample_test.tree
+
+	$(TESTER) $(DATA)/seed.tree $(RST)/seed_test.tree >> $(NOTE)
+	#$(TESTER) $(DATA)/desert.tree $(RST)/desert_test.tree >> $(NOTE)
+	#$(TESTER) $(DATA)/sample.tree $(RST)/sample_test.tree >> $(NOTE)
+
+	echo "ERREURS = " $$(cat $(NOTE) | sort | uniq | grep "FAILED" | wc -c)
+
+	
+
+
