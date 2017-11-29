@@ -41,3 +41,5 @@ $(RST)/%.mp4 : datas/%.tree
 	ffmpeg -r 10 -i $$DIR/%0$${#I}d.tree.png -r 10 $@ ;\
 	convert -delay 10 -loop 0 $$DIR/*.png $$DIR.gif
 
+README.pdf : README.md
+	pandoc -t beamer $< --highlight-style=zenburn -o $@

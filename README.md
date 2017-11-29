@@ -1,10 +1,35 @@
-# SOGITREE
+% SOGITREE
+% Le Druidisme expliqué aux personnes âgées
 
-L'objectif est de faire un programme faisant pousser de la végétation. Le format manipulé est le format .tree.
+## TLDR
 
-## Format .tree
+SogiTree est un challenge de code. Le thème est de faire pousser des arbres à partir de 3 outils :
 
-Un fichier au format .tree est un fichier texte représentant une matrice de symboles. Chaque lettre est associée à un concept :
+- Des fichiers .tree qui représente un monde et des arbres
+- Un exécutable Sogitree qui transforme le monde en faisant pousser les arbres
+- Un executable tree2png qui transforme un fichier .tree en image png
+
+Ces 3 outils sont fournis en version basique et sont indépendants.
+
+On gagne des points de différentes façons, à chacun sa stratégie !
+
+##Contexte
+
+Une guerre mondiale s'est déclenchée entre les partisans des espaces et des tabulation.
+
+Le SogiMonde étant dévasté, une communauté de druides survivants tente de planter les graines d'un monde nouveau.
+
+##Format tree
+
+Le monde connu a été fortement modifié par les armes technologies utilisées dans le conflit.
+
+Sa forme est maintenant une matrice rectangulaire de caractères ASCII
+
+Les univers parallèles existent, ils sont simplement stockés dans différents fichiers .tree.
+
+##Elements
+
+Seuls 8 caractères sont encore sains :
 
 - 'f' du feuillage clairsemé
 - 'F' du feuillage dense
@@ -15,37 +40,60 @@ Un fichier au format .tree est un fichier texte représentant une matrice de sym
 - '-' de la terre
 - ' ' pour l'air.
 
-Tous les autres caractères sont interdits à part les sauts de lignes et la fin de fichier.
+Tout autre élément est radioactif et ne doit pas être utilisé !
 
-## Programme attendu
+##Prerequis
 
-L'objectif du programme est de faire pousser la végétation d'un format .tree. Pour cela un fichier .tree est lu en entrée et le résultat est produit sous la forme d'un nouveau fichier .tree.
+Pour utiliser ce projet vous aurez besoin du top de la technologie !
 
-Example d'utilisation :
+`sudo apt-get install python3 make ffmpeg imagemagick`
+
+##Les fichiers .tree
+
+Des fichiers .tree d'exemple sont stockés dans le répertoire `datas`
+
+##SogiTree
+
+L'exécutable doit être placé à la racine du projet. Il lit le fichier .tree depuis son entrée standard et produit le résultat sur la sortie standard.
 
 ```
 	cat graine.tree | ./SogiTree > result.tree
 ```
 
-Par défaut le programme SogiTree fait pousser la végétation d'une unité de temps. Le programme devra accepter un paramètre optionnel permettant de spécifier le nombre d'unité de temps utilisée pour les calculs.
+Il fait évoluer le monde d'une unité de temps. Cette unité n'est pas définie.
 
-Example d'utilisation avec paramètre :
+##tree2png
+
+Cet exécutable transforme un fichier .tree en image png. SOn interface est la suivante :
 
 ```
-	cat graine.tree | ./SogiTree -n 50 > result_50.tree
+	tree2png monde.tree monde.png
 ```
 
-## Visualisation du fichier .tree
+##Déroulement
 
-Par défaut le script tree2ppm.sh permet de transformer le fichier .tree en une image .ppm qu'il est possible de visualiser.
+- 11h50 : formation des trinômes
+- 12h : Briefing
+- 12h15 : Top départ !
+- 14h00 : Rammassage des fichiers .tree bonus
+- 14h30 : Fin du code ! Envoie des résultats et concertation du Jury
+- 14h50 : Annonce des résultats
+- 15h : Fin du challenge ! Back to work !
 
-## Critères d'évaluation
+## Notation
 
-Chaque programme sera noté sur la qualité de l'algorithme de croissance de la végétation sur des critères purement subjectifs par les participants. Pour cela nous comparerons les résultats obtenus par chaque programme à partir de la même graine.
+Tests : 5 points
+Esthétique (Jury) : 5 points
+Réalisme du SogiTree: 5 points
+tree2png amélioré : 5 points
 
-Un bonus pourra être envisagé pour toute solution sympa de visualisation du fihier .tree
+Bonus :
 
-### Les 10 règles du Tree Club
+- +1 point pour un fichier .tree fullhd accepté par l'arbitre (max 2 points)
+- +1 point par fix d'un test intégré par l'arbitre(démonstration d'erreur + patch)
+- +1 point par proposition de test supplémentaire accepté par l'arbitre
+
+## Les 10 règles des tests
 
 0. On ne parle pas du Tree Club
 1. Respecte la géométrie du monde
@@ -55,17 +103,12 @@ Un bonus pourra être envisagé pour toute solution sympa de visualisation du fi
 5. Une racine ne pousse que dans la terre
 6. Un vieux tronc ne disparait pas
 7. Un jeune tronc ne peut devenir qu'un vieux tronc
-8. un jeune tronc ne peut se créer qu'au contact d'une racine ou d'un tronc
-9. Le feuillage doit pouvoir faire contact avec une racine via des éléments végétaux
-10. Les cailloux et le sol ça pousse pas hein...
+8. Les cailloux et le sol ça pousse pas hein...
+9. un jeune tronc ne peut se créer qu'au contact d'une racine ou d'un tronc
+10. Le feuillage doit pouvoir faire contact avec une racine via des éléments végétaux
 
-## Organisation
+2 derniers non implémentés
 
-- Equipes de 3 préparées à l'avance
-- Présentation du sujet à 12h pendant 15 minutes
-- Cloture des résultats 20 minutes
-- Costume d'arbitre
-- Note artistique 5 points
-- Note réalisme (affichage)
-- Points TDD
-- Scripts d'
+## Happy Hacking !
+
+Soumission à l'email de l'arbitre des fichiers .tree et animations
