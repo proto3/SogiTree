@@ -112,3 +112,5 @@ Bonus :
 ## Happy Hacking !
 
 Soumission à l'email de l'arbitre des fichiers .tree et animations
+
+Obtenir sa note : `make -i note`

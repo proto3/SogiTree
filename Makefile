@@ -53,10 +53,11 @@ note:
 	$(SOGITREE) < $(DATA)/sample.tree > $(RST)/sample_test.tree
 
 	$(TESTER) $(DATA)/seed.tree $(RST)/seed_test.tree >> $(NOTE)
-	#$(TESTER) $(DATA)/desert.tree $(RST)/desert_test.tree >> $(NOTE)
-	#$(TESTER) $(DATA)/sample.tree $(RST)/sample_test.tree >> $(NOTE)
+	$(TESTER) $(DATA)/desert.tree $(RST)/desert_test.tree >> $(NOTE)
+	$(TESTER) $(DATA)/sample.tree $(RST)/sample_test.tree >> $(NOTE)
 
-	echo "ERREURS = " $$(cat $(NOTE) | sort | uniq | grep "FAILED" | wc -c)
+	@echo "ERREURS = " $$(cat $(NOTE) | sort | uniq | grep "FAILED" | wc -l)
+	@echo "TESTS OK= " $$(cat $(NOTE) | sort | uniq | grep "SUCCESS" | wc -l)
 
 	
 
